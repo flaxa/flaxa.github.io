@@ -173,7 +173,9 @@ The solution shows how to read the `.skibidi` file format by:
 The output for this code is an image where the photo contains the flag.
 
 
-![](/assets/img/posts/tcp1p-2024-skibidi-format/output_image.png)
+<p align="center">
+  <img src="/assets/img/posts/tcp1p-2024-skibidi-format/output_image.png" alt="Output Image" style="max-width: 100%; height: auto; border-radius: 10px;">
+</p>
 
 ## Solution Code
 
