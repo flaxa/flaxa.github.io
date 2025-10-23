@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+        },{id: "nav-teaching-history",
+          title: "Teaching History",
+          description: "Overview of the courses I have been involved in teaching at the **University of Kent**, organised by academic year and course level.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -71,14 +71,14 @@ ninja.data = [{
           section: "News",},{id: "news-paper-accepted-into-autonomouscyber-2025-workshop-co-located-with-esorics-2025-for-my-paper-titled-knowledge-retention-for-generic-reinforcement-learning-policies-in-autonomous-cyber-defence",
           title: 'Paper accepted into AutonomousCyber 2025 workshop co-located with ESORICS 2025 for my paper...',
           description: "",
-          section: "News",},{id: "news-i-won-the-distinguished-paper-award-at-the-autonomouscyber-2025-workshop-co-located-with-esorics-2025-automated-cyber-defence-with-reinforcement-learning-in-multi-attack-environments",
-          title: 'I won the distinguished paper award at the AutonomousCyber 2025 workshop co-located with...',
-          description: "",
           section: "News",},{id: "news-presented-my-paper-at-the-autonomouscyber-2025-workshop-co-located-with-esorics-2025-knowledge-retention-for-generic-reinforcement-learning-policies-in-autonomous-cyber-defence",
           title: 'Presented my paper at the AutonomousCyber 2025 workshop co-located with ESORICS 2025 (Knowledge...',
           description: "",
           section: "News",},{id: "news-presented-my-paper-at-the-autonomouscyber-2025-workshop-co-located-with-esorics-2025-automated-cyber-defence-with-reinforcement-learning-in-multi-attack-environments",
           title: 'Presented my paper at the AutonomousCyber 2025 workshop co-located with ESORICS 2025 (Automated...',
+          description: "",
+          section: "News",},{id: "news-i-won-the-distinguished-paper-award-at-the-autonomouscyber-2025-workshop-co-located-with-esorics-2025-automated-cyber-defence-with-reinforcement-learning-in-multi-attack-environments",
+          title: 'I won the distinguished paper award at the AutonomousCyber 2025 workshop co-located with...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
