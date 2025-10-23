@@ -44,8 +44,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching-history",
-          title: "Teaching History",
+        },{id: "nav-teaching",
+          title: "teaching",
           description: "Overview of the courses I have been involved in teaching at the **University of Kent**, organised by academic year and course level.",
           section: "Navigation",
           handler: () => {
