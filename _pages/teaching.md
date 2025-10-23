@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: Teaching History
+title: teaching
 description: Overview of the courses I have been involved in teaching at the **University of Kent**, organised by academic year and course level.
 nav: true
 nav_order: 6
