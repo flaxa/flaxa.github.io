@@ -2,8 +2,10 @@
   "basics": {
     "name": "Joshua Sylvester",
     "label": "Cyber Security Researcher",
-    "summary": "A motivated and hardworking researcher with a passion for artificial intelligence and cyber security. Experienced in reinforcement learning, cyber defence, and machine learning applications. Committed to advancing autonomous cyber defence through scalable reinforcement learning methods and reducing the sim-to-real gap in research.",
+    "summary": "A motivated and hardworking researcher with a passion for artificial intelligence and cyber security. Experienced in reinforcement learning, cyber defence, and machine learning applications. Committed to advancing autonomous cyber defence through scalable reinforcement learning methods and the detection and mitigation of novel threats.",
     "location": {
+      "address": "",
+      "postalCode": "",
       "city": "Canterbury",
       "countryCode": "UK",
       "region": "Kent"
@@ -12,16 +14,12 @@
   },
   "work": [
     {
-      "name": "",
+      "name": "Along side the Alan Turing Institute",
       "position": "Cyber Security Researcher",
       "url": "",
       "startDate": "2025-07-14",
       "endDate": "",
-      "summary": "Researching reinforcement learning for autonomous cyber defence. Focused on removing assumptions from simulators and adapting PPO algorithms for scalable, task-based reinforcement learning.",
-      "highlights": [
-        "Developed new PPO variants for scalable multi-task learning.",
-        "Improved sim-to-real transfer in cyber defence environments."
-      ]
+      "summary": "Researching reinforcement learning for autonomous cyber defence.",
     },
     {
       "name": "University of Kent",
@@ -68,6 +66,8 @@
   ],
   "education": [
     {
+      "endDate": "",
+      "startDate": "2023-01-14",
       "institution": "University of Kent",
       "area": "Cyber Security and Artificial Intelligence",
       "studyType": "PhD (Ongoing)",
@@ -75,6 +75,8 @@
       "summary": "Working on autonomous cyber defence and reinforcement learning, with research published at IEEE CSR and collaboration with Dstl ARCD on 'Reward shaping for network defence based on reinforcement learning.'"
     },
     {
+      "startDate": "2019-09-01",
+      "endDate": "2022-06-01",
       "institution": "University of Kent",
       "area": "Computer Science",
       "studyType": "Bachelor’s Degree (Hons)",
@@ -83,12 +85,16 @@
       "summary": "Awarded for outstanding overall performance and best final-year project in the School of Computing."
     },
     {
+      "endDate": "2019-06-01",
+      "startDate": "2017-09-01",
       "institution": "East Norfolk Sixth Form College",
       "area": "A-Levels",
       "studyType": "Pre-University",
       "courses": ["Computer Science (B)", "Chemistry (A)", "Mathematics (B)"]
     },
     {
+      "endDate": "2017-06-01",
+      "startDate": "2015-09-01",
       "institution": "University Technical College Norfolk",
       "area": "General Education",
       "studyType": "GCSEs",
@@ -101,9 +107,30 @@
       ]
     }
   ],
+  "awards": [
+    {
+      "title": "Outstanding Overall Performance in the School of Computing",
+      "date": "2022-08-01",
+      "awarder": "University of Kent",
+      "summary": "Awarded to the highest performing student of the year for achieving the best overall marks in the degree programme."
+    },
+    {
+      "title": "Best Final Year Computing Research Project award",
+      "date": "2022-08-01",
+      "awarder": "University of Kent",
+      "summary": "Best Final Year Computing Research Project award, given to the student with the highest performing research project in the degree programme."
+    },
+    {
+      "title": "Distinguished Paper Award",
+      "date": "2025-09-25",
+      "awarder": "ESORICS 2025 - AutonomousCyber 2025",
+      "summary": "Received the Distinguished Paper Award at the AutonomousCyber 2025 workshop for outstanding research contribution to autonomous cyber defence."
+    }
+  ],
   "skills": [
     {
       "name": "Technical Skills",
+      "icon": "fa-solid fa-hashtag",
       "keywords": [
         "Cyber Security",
         "Reinforcement Learning",
@@ -116,6 +143,7 @@
     },
     {
       "name": "Soft Skills",
+      "icon": "fa-solid fa-hashtag",
       "keywords": [
         "Attention to Detail",
         "Creativity",
@@ -140,6 +168,7 @@
   "interests": [
     {
       "name": "Hobbies",
+      "icon": "fa-solid fa-hashtag",
       "keywords": ["Fishing", "Swimming", "Gym", "Reading", "Cooking"]
     }
   ]
