@@ -10,8 +10,8 @@ nav_order: 6
 ## Academic Year 2024–2025
 - **COMP3830** – Problem Solving with Algorithms (Year 1)
 - **COMP6575** – Blockchain Systems (Year 2)
-- **COMP8990** – Advanced Topics in Cyber Security (Postgraduate) *(Guest lecture)*
 - **COMP8760** – Computer Security (Postgraduate)
+- **COMP8990** – Advanced Topics in Cyber Security (Postgraduate) *(Guest lecture)*
 
 ---
 
