@@ -6,10 +6,12 @@ description: Write up from Hack The Box
 tags: cryptography
 categories: write-ups
 ---
+
 - CTF: Hack The Box
 - Challenge Name: Weak RSA
 - Category: Cryptography
 - Difficulty: Easy
+
 ## Synopsis
 
 In this CTF challenge, we are given an RSA public key and an encrypted flag file. The goal is to decrypt the flag using Wiener's attack, which targets RSA keys with small private exponents. By exploiting this vulnerability, we can recover the private key and decrypt the encrypted message.

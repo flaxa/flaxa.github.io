@@ -6,11 +6,11 @@ description: Write up from the TCP1P 2024 CTF competition
 tags: forensics
 categories: write-ups
 ---
+
 - CTF: TCP1P 2024
 - Challenge Name: Skibidi Format
 - Category: Forensics
 - Difficulty: Unknown
-
 
 ## Synopsis
 
