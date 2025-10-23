@@ -266,10 +266,10 @@ display_categories: ["write-ups"] # these categories will be displayed on the fr
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Sylvester]
+  first_name: [Joshua, J., Josh]
 
-  style: apa
+  style: ieee
   locale: en
 
   source: /_bibliography/
