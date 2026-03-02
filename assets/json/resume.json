@@ -13,14 +13,7 @@
     "profiles": []
   },
   "work": [
-    {
-      "name": "Along side the Alan Turing Institute",
-      "position": "Cyber Security Researcher",
-      "url": "",
-      "startDate": "2025-07-14",
-      "endDate": "",
-      "summary": "Researching reinforcement learning for autonomous cyber defence."
-    },
+    
     {
       "name": "University of Kent",
       "position": "Graduate Teaching Assistant",
@@ -32,6 +25,14 @@
         "Led undergraduate computing classes.",
         "Prepared instructional materials and guided student projects."
       ]
+    },
+    {
+      "name": "Alan Turing Institute",
+      "position": "Visiting Researcher",
+      "url": "",
+      "startDate": "2025-07-14",
+      "endDate": "2026-01-16",
+      "summary": "Researching reinforcement learning for autonomous cyber defence."
     },
     {
       "name": "Orange Cyberdefense",

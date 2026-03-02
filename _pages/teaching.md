@@ -7,6 +7,12 @@ nav: true
 nav_order: 6
 ---
 
+## Academic Year 2025–2026
+- **COMP4103** – Programming II (Year 1)
+- **COMP7017** – Deep Learning (Postgraduate)
+
+---
+
 ## Academic Year 2024–2025
 - **COMP3830** – Problem Solving with Algorithms (Year 1)
 - **COMP6575** – Blockchain Systems (Year 3)
