@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "My CV is provided below for further details about my experience and work.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -79,6 +79,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-i-won-the-distinguished-paper-award-at-the-autonomouscyber-2025-workshop-co-located-with-esorics-2025-automated-cyber-defence-with-reinforcement-learning-in-multi-attack-environments",
           title: 'I won the distinguished paper award at the AutonomousCyber 2025 workshop co-located with...',
+          description: "",
+          section: "News",},{id: "news-paper-accepted-into-the-1st-international-workshop-on-ai-safety-and-security-co-located-with-edcc-2026-agentic-knowledge-distillation-autonomous-training-of-small-language-models-for-sms-threat-detection",
+          title: 'Paper accepted into the 1st International Workshop on AI Safety and Security co-located...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
