@@ -10,6 +10,7 @@ nav_order: 6
 ## Academic Year 2025–2026
 - **COMP4103** – Programming II (Year 1)
 - **COMP7017** – Deep Learning (Postgraduate)
+- **COMP7029** – Artificial Intelligence and Cyber Security (Postgraduate) *(Guest lecture)*
 
 ---
 
