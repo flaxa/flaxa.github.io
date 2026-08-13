@@ -50,9 +50,9 @@ The program never checks that return value. It proceeds to `SetWaitableTimer` wi
   <img src="/assets/img/posts/the-lab-7-1-ddos-that-never-happens/04-stack-systemtime-and-filetime.png" alt="Memory view showing the SYSTEMTIME and the zeroed FILETIME passed to SetWaitableTimer" style="max-width: 100%; height: auto; border-radius: 10px;">
 </p>
 
-At `0x12FB68` you can see the SYSTEMTIME, with `0x834` in the year field (2100 in decimal). At `0x12FB78` is the FILETIME after the failed call contains sixteen zeros. A FILETIME counts 100-nanosecond intervals since 1601-01-01 UTC, so all zeros is that date.
+At `0x12FB68` you can see the SYSTEMTIME, with `0x834` in the year field (2100 in decimal). At `0x12FB78` is the FILETIME, which after the failed call contains sixteen zeros. A FILETIME counts 100-nanosecond intervals since 1601-01-01 UTC, so all zeros is that date.
 
-`SetWaitableTimer` treats a positive due time as an absolute UTC time and a negative one as a relative offset. Zero is not negative, so it is read as absolute 1601-01-01, over four centuries in the past. This causes the timer is signalled immediately, `WaitForSingleObject` returns instantly, and everything that's meant to happen in the year 2100 happens the instant you run the sample.
+`SetWaitableTimer` treats a positive due time as an absolute UTC time and a negative one as a relative offset. Zero is not negative, so it is read as absolute 1601-01-01, over four centuries in the past. This causes the timer to be signalled immediately, `WaitForSingleObject` returns instantly, and everything that's meant to happen in the year 2100 happens the instant you run the sample.
 
 My understanding is that the zeroed `FILETIME` buffer isn't guaranteed. When `SystemTimeToFileTime` fails, the contents of the output buffer are technically undefined and it is zero here because that region of stack happened to be zero.
 
@@ -95,14 +95,12 @@ To test this, I set both values to 20 and ran the sample against each server aga
 | Python Server | 1.0          | 4 (default)               | 4             |
 | INetSim       | 1.1          | 20                        | 20            |
 | Python Server | 1.0          | 20                        | 20            |
-<p align="center">
-  <img src="/assets/img/posts/the-lab-7-1-ddos-that-never-happens/systemtime-setup.png" alt="SYSTEMTIME structure built on the stack with only the year field set" style="max-width: 100%; height: auto; border-radius: 10px;">
-</p>
-The request count tracks the configured limit, once the limit of handles is reached the next call blocks wait for one to free up. This also means the program doesn't stop so much as seize. The threads are still alive, but permanently blocked inside `InternetOpenUrlA` waiting on a connection that does not released. 
+
+The request count tracks the configured limit. Once the limit of handles is reached the next call blocks waiting for one to free up. This also means the program doesn't stop so much as seize. The threads are still alive, but permanently blocked inside `InternetOpenUrlA` waiting on a connection that does not get released. 
 
 ## Conclusions
 
-Both problems are caused by a return value that is not checked. `SystemTimeToFileTime` fails on an invalid `SYSTEMTIME` and the program carries on with a due time of 1601, so the timer fires immediately. `InternetOpenUrlA` hands back a handle that is not closed, so they exhaust WinInet's connection pool after two/four requests and block there for good.
+Both problems are caused by a return value that is not checked. `SystemTimeToFileTime` fails on an invalid `SYSTEMTIME` and the program carries on with a due time of 1601, so the timer fires immediately. `InternetOpenUrlA` hands back a handle that is not closed, so the threads exhaust WinInet's connection pool after two/four requests and block there for good.
 
 So the answers I would give to the book's last two questions:
 
