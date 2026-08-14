@@ -28,7 +28,7 @@ These are the official answers, and they're also the only answers I've found in 
 
 ## The timer never targets 2100
 
-To build a timer that waits until 2100, the program constructs a `SYSTEMTIME` structure on the stack, zeroes it, and writes only the year field — `0x834`, or 2100 in decimal. It then calls `SystemTimeToFileTime` to convert this into a `FILETIME`, which is passed to `SetWaitableTimer` as the due time.
+To build a timer that waits until 2100, the program constructs a `SYSTEMTIME` structure on the stack, zeroes it, and writes only the year field to the value `0x834`, or 2100 in decimal. It then calls `SystemTimeToFileTime` to convert this into a `FILETIME`, which is passed to `SetWaitableTimer` as the due time.
 
 <p align="center">
   <img src="/assets/img/posts/the-lab-7-1-ddos-that-never-happens/01-timer-setup-disassembly.png" alt="SYSTEMTIME structure built on the stack with only the year field set" style="max-width: 100%; height: auto; border-radius: 10px;">
@@ -100,7 +100,7 @@ The request count tracks the configured limit. Once the limit of handles is reac
 
 ## Conclusions
 
-Both problems are caused by a return value that is not checked. `SystemTimeToFileTime` fails on an invalid `SYSTEMTIME` and the program carries on with a due time of 1601, so the timer fires immediately. `InternetOpenUrlA` hands back a handle that is not closed, so the threads exhaust WinInet's connection pool after two/four requests and block there for good.
+Both problems are caused by a return value that is not checked. `SystemTimeToFileTime` fails on an invalid `SYSTEMTIME` and the program carries on with a due time of 1601, so the timer fires immediately. `InternetOpenUrlA` hands back a handle that is not closed, so the threads exhaust WinInet's connection pool after two/four requests and is blocked there for good.
 
 So the answers I would give to the book's last two questions:
 
